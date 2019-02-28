@@ -3,8 +3,7 @@ jobs:
   build:
     branches:
       only:
-        - master
-        - dev
+        - my
     docker:
       - image: circleci/node:8.6.0
     working_directory: ~/repo
