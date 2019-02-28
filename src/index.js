@@ -196,6 +196,7 @@ class Valine {
         let commonQuery = (cb) => {
             let query = new _root.v.Query('Comment');
             query.equalTo('url', defaultComment['url']);
+            query.notEqualTo('isSpam', true);
             query.descending('createdAt');
             return query;
         }
